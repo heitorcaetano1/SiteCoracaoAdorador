@@ -1,3 +1,17 @@
 from django.contrib import admin
+from .models import Produto, Categoria, Variacao
 
-# Register your models here.
+
+@admin.register(Produto)
+class ProdutoAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'descricao', 'preco', 'imagem', 'estoque', 'data_criacao', 'categoria')
+
+
+@admin.register(Categoria)
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'descricao')
+
+
+@admin.register(Variacao)
+class VariacaoAdmin(admin.ModelAdmin):
+    list_display = ('produto', 'nome', 'preco', 'estoque')

@@ -18,5 +18,5 @@ class PedidoAdmin(admin.ModelAdmin):
 
 
 @admin.register(ItemPedido)
-class ItemPedidoAdmin():
+class ItemPedidoAdmin(admin.ModelAdmin):
     list_display = ('pedido', 'produto', 'quantidade', 'preco_unitario')

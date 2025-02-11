@@ -12,12 +12,13 @@ class Cliente(models.Model):
     newsletter = models.BooleanField(default=False, verbose_name='Receber Newsletter')
     data_cadastro = models.DateTimeField(auto_now_add=True, verbose_name='Data de Cadastro')
 
+
     def __str__(self):
         return f'{self.nome} {self.sobrenome}'
 
 
 class Endereco(models.Model):
-    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='enderecos')
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='cliente_enderecos')
     logradouro = models.CharField(max_length=255)
     numero = models.CharField(max_length=20)
     complemento = models.CharField(max_length=255, blank=True, null=True)
@@ -29,14 +30,14 @@ class Endereco(models.Model):
 
 
 class Pedido(models.Model):
-    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='pedidos')
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='cliente_pedidos')
     data_pedido = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=20, choices=[('P', 'Pendente'), ('A', 'Aprovado'), ('C', 'Cancelado')], default='P')
     valor_total = models.DecimalField(max_digits=10, decimal_places=2)
 
 
 class ItemPedido(models.Model):
-    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name='itens')
-    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
+    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name='cliente_itens_pedidos')
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE, related_name='cliente_itens_pedido')
     quantidade = models.PositiveIntegerField(default=1)
     preco_unitario = models.DecimalField(max_digits=10, decimal_places=2)

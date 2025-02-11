@@ -1,10 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Início - Coração Adorador{% endblock %}
+
+{% block content %}
+<section class="pl-40">
+  <div class="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="static/img/teste1.jpg" alt="imagem1">
+      </div>
+      <div class="carousel-item active">
+        <img src="static/img/teste2.jpg" alt="imagem2">
+      </div>
+      <div class="carousel-item active">
+        <img src="static/img/teste3.jpg" alt="imagem3">
+      </div>
+    </div>
+  </div>
+
+  <!--Conteudo do site -->
+  <div class="container text-center">
+    <div class="container">
+      <h1 class="text-4xl font-bold text-red-500 mb-4">Bem-vindo à Coração Adorador</h1>
+      <p class="mb-6">
+        Sua melhor experiência de compra online começa aqui.
+      </p>
+      <a href="#" class="btn-primario">Confira nossos produtos</a>
+    </div>
+
+    <!--Cads-->
+    <div class="container py-50">
+      <h2 class="font-bold text-red-500 mb-4">Destaques</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!--Card 1 -->
+        <div class="bg-pink-100 shadow-md rounded-lg overflow-hidden w-full h-80">
+            <img src="" alt="Categoria 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2"></h2>
+                <p class="text-red-600"></p>
+            </div>
+        </div>
+        <!--Card 2 -->
+        <div class="bg-pink-100 shadow-md rounded-lg overflow-hidden w-full h-80">
+            <img src="" alt="Categoria 2" class="w-full h-38 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2"></h2>
+                <p class="text-red-600"></p>
+            </div>
+        </div>
+        <!--Card 3 -->
+        <div class="bg-pink-100 shadow-md rounded-lg overflow-hidden w-full h-80">
+            <img src="" alt="Categoria 3" class="w-full h-38 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2"></h2>
+                <p class="text-red-600"></p>
+            </div>
+        </div>
+         <!--Card 4 -->
+        <div class="bg-pink-100 shadow-md rounded-lg overflow-hidden w-full h-80">
+            <img src="" alt="Categoria 4" class="w-full h-38 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2"></h2>
+                <p class="text-red-600"></p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-100 ">
+      <!--anuncio parceiro -->
+        <div class="bg-pink-100 shadow-md rounded-lg overflow-hidden w-full h-80">
+            <img src="" alt="Anuncio Parceiro" class="object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2"></h2>
+                <p class="text-red-600"></p>
+            </div>
+        </div>
+    </div>
+    <div class="container py-100">
+      <div class="grid grid-cols-2 md:gird-cols-1 lg:grid-cols-2 gap-6 py-100">
+          <div class="bg-pink-100 shadow-md rounded-lg overflow-hidden w-full h-80">
+              <img src="" alt="Promoções" class="object-cover">
+              <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2"></h2>
+                    <p class="text-red-600"></p>
+              </div>
+          </div>
+          <div class="bg-pink-100 shadow-md rounded-lg overflow-hidden w-150 h-80">
+              <img src="" alt="kits" class="object-cover">
+              <div class="p-4">
+                  <h2 class="text-xl font-semibold mb-2"></h2>
+                  <p class="text-red-600"></p>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+{% endblock %}
