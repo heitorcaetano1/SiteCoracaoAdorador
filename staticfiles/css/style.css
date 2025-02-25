@@ -1,0 +1,159 @@
+/* Paleta de cores ajustada */
+/* Branco: fundo principal, Vermelho: destaques e botões, Rosa: detalhes e elementos secundários */
+
+
+/* Estrutura geral */
+.container {
+    margin: 45px auto;
+    padding: 30px;
+    max-width: 1700px; /* Para evitar que o conteúdo fique muito espalhado */
+}
+
+
+/* Fundo principal */
+.bg-principal {
+    background-color: rgb(255, 105, 180);
+}
+
+/* Texto padrão */
+.text-principal {
+    color: #222222;
+}
+
+/* Botão principal */
+.btn-primario {
+    background-color: #E60023; /* Vermelho vibrante */
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primario:hover {
+    background-color: #B8001E; /* Tom de vermelho mais escuro */
+}
+
+/* Seção de banners */
+.banner-pink {
+    background-color: #FFEEF2; /* Tom de rosa pastel */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Botão secundário */
+#butao {
+    width: 120px;
+    text-align: center;
+    background-color: #FF8AAE; /* Rosa médio */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#butao:hover {
+    background-color: #E60023; /* Vermelho vibrante ao passar o mouse */
+}
+
+/* Formulário de contato */
+.form-contato {
+    margin: 20px 15px;
+    padding: 15px;
+    background-color: #FFF5F7; /* Tom de rosa bem suave */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização do carrossel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    max-height: 400px;
+    margin: auto;
+}
+
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    max-height: 400px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+/* Controles do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(230, 0, 35, 0.7); /* Vermelho semi-transparente */
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(184, 0, 30, 0.9); /* Vermelho mais forte */
+}
+
+.carousel-control-prev {
+    left: 15px;
+}
+
+.carousel-control-next {
+    right: 15px;
+}
+
+.btn-blood-red {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+}
+
+.menu-bar {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+        }
+.menu-bar a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}

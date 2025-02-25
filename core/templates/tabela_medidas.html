@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Tabela de Medidas{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Tabela de Medidas</h1>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Tamanho</th>
+                    <th>Busto (cm)</th>
+                    <th>Cintura (cm)</th>
+                    <th>Quadril (cm)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PP</td>
+                    <td>80-84</td>
+                    <td>62-66</td>
+                    <td>88-92</td>
+                </tr>
+                <tr>
+                    <td>P</td>
+                    <td>84-88</td>
+                    <td>66-70</td>
+                    <td>92-96</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>88-92</td>
+                    <td>70-74</td>
+                    <td>96-100</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>92-96</td>
+                    <td>74-78</td>
+                    <td>100-104</td>
+                </tr>
+                <tr>
+                    <td>GG</td>
+                    <td>96-100</td>
+                    <td>78-82</td>
+                    <td>104-108</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="mt-3">
+        * As medidas podem variar ligeiramente dependendo do modelo e tecido.
+    </p>
+</div>
+{% endblock %}

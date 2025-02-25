@@ -1,0 +1,243 @@
+/* Paleta de cores ajustada */
+/* Branco: fundo principal, Vermelho: destaques e botões, Rosa: detalhes e elementos secundários */
+
+/* Estrutura geral */
+.container {
+    margin: 45px auto;
+    padding: 30px;
+    max-width: 1700px;
+}
+
+/* Cores personalizadas */
+.bg-custom-red {
+    background-color: #E60023;
+}
+
+.text-custom-red {
+    color: white;
+}
+
+.bg-custom-pink {
+    background-color: #ffe4e6;
+}
+
+/* Barra de menu */
+.menu-bar {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-bar a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Botão principal */
+.btn-primario {
+    background-color: #E60023;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primario:hover {
+    background-color: #B8001E;
+}
+
+/* Botão secundário */
+#butao {
+    width: 120px;
+    text-align: center;
+    background-color: #FF8AAE;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#butao:hover {
+    background-color: #E60023;
+}
+
+/* Formulário de contato */
+.form-contato {
+    margin: 20px 15px;
+    padding: 15px;
+    background-color: #FFF5F7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    max-height: 400px;
+    margin: auto;
+}
+
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    max-height: 400px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item img {
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Controles do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(230, 0, 35, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(184, 0, 30, 0.9);
+}
+
+.carousel-control-prev {
+    left: 15px;
+}
+
+.carousel-control-next {
+    right: 15px;
+}
+
+/* Cards de produtos */
+.card {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    height: 420px;
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+}
+
+.button-container {
+    display: none;
+    position: inline-flex;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-body:hover .button-container {
+    display: inline-block;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-blood-red {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(255, 0, 0, 0.6);
+    background-filter: blur(10);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.03s ease, box-shadow 0.3s ease;
+}
+
+.btn-blood-red:hover {
+    background-color: rgb(255, 0, 0, 0.8);
+    box-shadow: 0 6px 12px rgb(0, 0, 0, 0.3);
+}
+
+/* Card de anúncios de parceiros */
+.container-anuncio {
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.partner-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Coração giratório */
+.rotating-heart {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    animation: rotateHeart 2s linear infinite !important; /* Adicionado !important */
+}
+
+.rotating-heart::before,
+.rotating-heart::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50px 50px 0 0;
+}
+
+.rotating-heart-svg {
+    width: 30px; /* Ajuste o tamanho conforme necessário */
+    height: 30px;
+    margin-right: 5px;
+}

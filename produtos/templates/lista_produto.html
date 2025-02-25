@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block title %}Produtos{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+     {% for p in produtos %}
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <img src="{{ p.imagem.thumb.url }}" alt="{{ p.nome }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ p.nome }}</h5>
+            <p class="card-text">{{ p.descricao|truncatewords:20 }}</p>
+            <p class="card-text">R$ {{ p.preco }}</p>
+              <a href="{% url 'produto' pk=p.pk %}" class="btn btn-blood-red">Ver Mais</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
