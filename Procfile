@@ -1,1 +1,1 @@
-web: gunicorn coracaoadorador.wsgi
+web: gunicorn coracao_adorador.wsgi
